@@ -1,6 +1,6 @@
 - In the views.py file, having this line of code:
 	 cap = cv2.VideoCapture(0)
-	- if you are having external camera attached to you system make sure you update this line of code with
+	- if you are having external camera attached to you system or the current system camera is not working, make sure you update this line of code with
 	 cap = cv2.VideoCapture(1)
 	 Instead of 0 put 1.
 
