@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- bootstrap-link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--javascript-link-bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!--css-link-->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
+
+    <title>TRACKO</title>
+    <link rel="shortcut icon" type="image" href="{% static 'images/favicon.png' %}" >
+</head>
+<body>
+    
+    <!--navbar-->
+    <div class="navbar">
+
+        <div class="mainname">
+           <a href="{% url 'index' %}"> <div class="nav-title">TRACKO</div></a>
+        </div>
+
+        <div class="menu">
+            <ul>
+            
+             <li><a href="about">ABOUT</a></li>
+             {% if user.is_authenticated %}
+             <li><a style="color:#AAAAAA">Hello, {{user.first_name}}</a></li>
+             <li><a href="{% url 'logout' %}">LOGOUT</a></li>
+             {% else %}
+             <li><a href="{% url 'login' %}">LOGIN</a></li>
+             <li><a href="{% url 'register' %}">REGISTER</a></li>
+             {% endif %}
+
+
+            </ul>
+        </div>
+        
+    </div>
+
+    
+    <!--register-->
+    <h1>CREATE DATASET</h1>
+
+
+
+    <form action="/generate_dataset" method="post" style="margin-top:2cm">
+    {% csrf_token %}
+
+     <div class="registermainbox">
+         
+     <div class="col-md-3 p-2 name">FULL NAME</div>
+     <div class="col-md-6 p-2">
+         <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required autocomplete="off">
+     </div>
+     <div class="col-md-3 p-2"></div>
+
+
+     <div class="col-md-3 p-2 name">UNIQUE ID</div>
+     <div class="col-md-6 p-2">
+         <input type="text" id="uniqueid" name="uniqueid" class="form-control" placeholder="EG: 22" required autocomplete="off">
+     </div>
+     <div class="col-md-3 p-2"></div>
+
+     <div class="col-md-3 p-2 name">BRANCH</div>
+     <div class="col-md-6 p-2">
+         <input type="text" id="branch" name="branch" class="form-control" placeholder="EG: COMPS, IT, EXTC" required autocomplete="off">
+     </div>
+     <div class="col-md-3 p-2"></div>
+     
+     <div class="col-md-3 p-2 name">Email</div>
+     <div class="col-md-6 p-2">
+         <input type="text" id="emailidstudent" name="emailidstudent" class="form-control" placeholder="Enter your email id here" required autocomplete="off">
+     </div>
+     <div class="col-md-3 p-2"></div>
+     
+     <div class="col-md-3 p-2 name">Contact Number</div>
+     <div class="col-md-6 p-2">
+         <input type="text" id="contact" name="contact" pattern="[0-9]{10}" class="form-control" placeholder="Enter your contact number [10-digit]" required autocomplete="off">
+     </div>
+     <div class="col-md-3 p-2"></div>
+        
+     <div class="col-md-3 p-2 name">Address</div>
+     <div class="col-md-6 p-2">
+            <input type="text" id="address" name="address" class="form-control" placeholder="Enter your address here" required autocomplete="off">
+    </div>
+    <div class="col-md-3 p-2"></div>
+
+        <div class="registerbtn" style="margin-left:.1cm">
+            <input id="Button1" type="submit" onclick="register()" class="btn btn-dark" value="CREATE-DATASET" >
+        </div>
+
+  </form>
+
+    <div class="instructions">
+        <h10 style="color:red">INSTRUCTIONS</h10><br><br>
+        <h10>- Fill all the required fields and click on create data.</h10><br><br>
+        <h10>- A camera will pop up which will scan and take you face data.</h10><br><br>
+        <h10>- Make sure while scanning/taking your face data you are in a proper lighting.</h10><br><br>
+        <h10>- It will not take your face data if you're not in a proper lighting.</h10><br><br>
+        <h10>- Once the face data has been taken it will automatically redirect you to the dash-board page.</h10><br><br>
+        <h10>- Next thing you have to do  is click on the train-data tab where the trainner will train the face data's.</h10><br><br>
+    </div>
+
+
+
+</body>
+</html>

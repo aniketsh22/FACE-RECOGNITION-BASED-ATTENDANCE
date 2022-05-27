@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- bootstrap-link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--javascript-link-bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!--css-link-->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
+
+    <title>TRACKO</title>
+    <link rel="shortcut icon" type="image" href="{% static 'images/favicon.png' %}" >
+</head>
+<body>
+    
+    <!--navbar-->
+    <div class="navbar">
+
+        <div class="mainname">
+           <a href="{% url 'index' %}"> <div class="nav-title">TRACKO</div></a>
+        </div>
+
+        <div class="menu">
+            <ul>
+            
+             <li><a href="about">ABOUT</a></li>
+             {% if user.is_authenticated %}
+             <li><a style="color:#AAAAAA">Hello, {{user.first_name}}</a></li>
+             <li><a href="{% url 'logout' %}">LOGOUT</a></li>
+             {% else %}
+             <li><a href="{% url 'login' %}">LOGIN</a></li>
+             <li><a href="{% url 'register' %}">REGISTER</a></li>
+             {% endif %}
+
+
+            </ul>
+        </div>
+        
+    </div>
+
+    
+    <!--register-->
+    <h1 style="color:#ff2626" >FACE DETECTED AND <br> ATTENDANCE MARKED SUCCESSFULLY !!</h1>
+
+
+    <form action="/markattendance" method="post" style="margin-top:-2cm">
+    {% csrf_token %}
+
+     <div class="registermainbox">
+
+        <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+        <lord-icon
+            src="https://cdn.lordicon.com/zbopvjaq.json"
+            trigger="loop"
+            colors="primary:#ffffff,secondary:#ffffff"
+            style="width:250px;height:250px;margin-left:10cm;margin-top:2cm">
+        </lord-icon>
+        
+  </form>
+
+
+
+</body>
+</html>

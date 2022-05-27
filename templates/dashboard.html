@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- bootstrap-link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--javascript-link-bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!--css-link-->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
+
+    <title>TRACKO</title>
+    <link rel="shortcut icon" type="image" href="{% static 'images/favicon.png' %}" >
+</head>
+<body>
+    
+    <!--navbar-->
+    <div class="navbar">
+
+        <div class="mainname">
+           <a href="{% url 'index' %}"> <div class="nav-title">TRACKO</div></a>
+        </div>
+
+        <div class="menu">
+            <ul>
+            
+             <li><a href="about">ABOUT</a></li>
+             {% if user.is_authenticated %}
+             <li><a style="color:#AAAAAA">Hello, {{user.first_name}}</a></li>
+             <li><a href="{% url 'logout' %}">LOGOUT</a></li>
+             {% else %}
+             <li><a href="{% url 'login' %}">LOGIN</a></li>
+             <li><a href="{% url 'register' %}">REGISTER</a></li>
+             {% endif %}
+
+
+            </ul>
+        </div>
+        
+    </div>
+
+    
+      <!--popular posts-->
+    <section>
+        <div class="dashboard-title">
+        <h2>DASHBOARD</h2>
+        </div>
+    </section>
+
+    <div class=alert>
+        {% for message in messages %}
+       <div class="alert alert-warning alert-dismissible fade show" role="alert">
+           <strong>Hello user!</strong> {{message}}
+           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+         </div>
+       {% endfor %}
+       </div>
+
+    <div class="container">
+       <div class="content-section">
+
+            <div class="card">
+            <a href="{% url 'createdata' %}"><img src="{% static 'images/12.jpg' %}"></a>
+            <a href="{% url 'createdata' %}"><div class="overlay">
+                <div class="text">SCAN AND CREATE DATA <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-webcam-fill" viewBox="0 0 16 16">
+                    <path d="M6.644 11.094a.5.5 0 0 1 .356-.15h2a.5.5 0 0 1 .356.15c.175.177.39.347.603.496a7.166 7.166 0 0 0 .752.456l.01.006h.003A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.224-.947l.002-.001.01-.006a3.517 3.517 0 0 0 .214-.116 7.5 7.5 0 0 0 .539-.34c.214-.15.428-.319.603-.496ZM7 6.5a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"/>
+                    <path d="M2 3a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H2Zm6 1.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM12.5 7a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1Z"/>
+                    </svg></div>
+            </div></a>
+            </div>
+
+            
+
+            <div class="card">
+                <a href="{% url 'train' %}"><img src="{% static 'images/13.jpg' %}"></a>
+                <a href="{% url 'train' %}"> <div class="overlay">
+                  <div class="text">TRAIN DATA <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-pulse-fill" viewBox="0 0 16 16">
+                    <path d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5Z"/>
+                    <path d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585c.055.156.085.325.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5c0-.175.03-.344.085-.5ZM9.98 5.356 11.372 10h.128a.5.5 0 0 1 0 1H11a.5.5 0 0 1-.479-.356l-.94-3.135-1.092 5.096a.5.5 0 0 1-.968.039L6.383 8.85l-.936 1.873A.5.5 0 0 1 5 11h-.5a.5.5 0 0 1 0-1h.191l1.362-2.724a.5.5 0 0 1 .926.08l.94 3.135 1.092-5.096a.5.5 0 0 1 .968-.039Z"/>
+                    </svg></div>
+                </div></a>
+            </div>
+
+            <div class="card">
+                <a href="{% url 'authenticateuser' %}"><img src="{% static 'images/14.jpg' %}"></a>
+                <a href="{% url 'authenticateuser' %}"> <div class="overlay">
+                    <div class="text">TAKE ATTENDANCE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"/>
+                        </svg></div>
+                </div></a>
+             </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="dashboard-instructions">
+        <h10 style="color:red">STEPS:</h10><br><br>
+        <h10>1. Scan and create your face data if you haven't already.</h10><br><br>
+        <h10>2. Make sure you click on the train data each time a new face data has been added or change in the face data has been made.</h10><br><br>
+        <h10>3. For taking attendance click on the take-attendance image/tab to take your attendance.</h10><br><br>
+    </div>
+
+
+
+</body>
+</html>
