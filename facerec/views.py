@@ -244,6 +244,10 @@ def detect_face(request):
                     
                 elif id==2:
                     cv2.putText(img, "BILLGATES", (x,y-5), cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 1, cv2.LINE_AA)
+                    
+                 #add uder data here [give id(same id provided while creating data) and name] 
+                 # elif id==2:
+                #cv2.putText(img, "BILLGATES", (x,y-5), cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 1, cv2.LINE_AA)
                 
             else:
                 cv2.putText(img, "UNKNOWN", (x,y-5), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0,0,255), 1, cv2.LINE_AA)
