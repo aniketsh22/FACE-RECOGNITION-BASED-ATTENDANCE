@@ -107,7 +107,8 @@ If css is giving error even if properly linked (Go to chrome > settings > clear 
 <img width="959" alt="cleardatass" src="https://user-images.githubusercontent.com/89505839/170664313-81deb74f-0ff2-4e48-883c-b18e1babfafe.png">
 
 
-# SCREENSHOTS OF THE APPLICATIONS
+
+# SCREENSHOTS OF THE APPLICATION
 
 Index page:
 <img width="960" alt="indexpagess" src="https://user-images.githubusercontent.com/89505839/170774148-29e51bde-3add-4a9b-ba74-54bc24962cd1.png">
