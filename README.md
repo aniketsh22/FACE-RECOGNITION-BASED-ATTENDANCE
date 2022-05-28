@@ -94,6 +94,7 @@ After running the following command, create one superuser by adding username, pa
 **If use face difficulty in creating superuser try with this old database credentials**
 
 USERNAME: aniket
+
 PASSWORD: 12345
 
 ## FOR ACCESSING ADMIN PANEL
