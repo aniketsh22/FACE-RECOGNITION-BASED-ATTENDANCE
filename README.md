@@ -112,6 +112,20 @@ If css is giving error even if properly linked (Go to chrome > settings > clear 
 
 <img width="960" alt="unknowncapturess" src="https://user-images.githubusercontent.com/89505839/170809685-5e4023f7-466a-4637-a233-ce86a5620a7f.png">
 
+# FEATURES AND MORE
+
+- The application has an authentication system for login into the system.
+- One should register their accound first, also the register asked required fields which should be filled properly. Here the username should be unique, if the username is already taken then it will prompt with an alert message.
+- Also the credentials should match properly or else you cannot login into  the application.
+- The dashboard conntains 3 main options > Scan and create data > Train images > take  attendance.
+- Detects face within second.
+- Also detects unknown faces which are not saved in the database.
+- The TRACKO logo on the navbar is also a type of hyperlink which will redirect you to the homepage of the application.
+- The faculty will have the access to the database where in all the Registered users data along with the email id will be saved. 
+- Also The student face data and student attendance when marked is saved in an csv file which is connected to the application.
+- The application also has About and Contact us.
+
+
 
 
 # SCREENSHOTS OF THE APPLICATION
