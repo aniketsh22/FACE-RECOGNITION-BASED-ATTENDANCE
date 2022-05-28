@@ -18,10 +18,6 @@ Problem statement:
 Develop a browser-based application or a native mobile application to demonstrate application of Face Recognition technology.
 You could choose to demonstrate application of Face Recognition in any area of application of your choice.
 
-## VIDEO :
-
-https://user-images.githubusercontent.com/89505839/170777929-5af0d5fd-6de5-4377-bcc4-1000bf9606f9.mp4
-
 
 ## Tech Stack
 
@@ -105,6 +101,16 @@ Enter username and paswword, which you have made while creating superuser. To ge
 If css is giving error even if properly linked (Go to chrome > settings > clear cache)
 
 <img width="959" alt="cleardatass" src="https://user-images.githubusercontent.com/89505839/170664313-81deb74f-0ff2-4e48-883c-b18e1babfafe.png">
+
+# OUTPUT
+
+**DETECTING FACES SUCCESSFULLY:** 
+
+<img width="960" alt="successss" src="https://user-images.githubusercontent.com/89505839/170809647-d624aa15-fa3b-433d-8149-25d38a20e457.png">
+
+**DETECTING UNKNOWN FACES:**
+
+<img width="960" alt="unknowncapturess" src="https://user-images.githubusercontent.com/89505839/170809685-5e4023f7-466a-4637-a233-ce86a5620a7f.png">
 
 
 
