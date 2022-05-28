@@ -90,6 +90,9 @@ After running the following command, create one superuser by adding username, pa
 ```bash
   python manage.py runserver
 ```
+<img width="570" alt="runss" src="https://user-images.githubusercontent.com/89505839/170811271-995d064d-f8ee-4840-92dd-19d7a857ee01.png">
+
+
 
 **If use face difficulty in creating superuser try with this old database credentials**
 
