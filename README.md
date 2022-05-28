@@ -38,6 +38,9 @@ You could choose to demonstrate application of Face Recognition in any area of a
 
 • OpenCV ( Computer Vision Library )
 
+# VIDEO LINK
+VIDEO LINK [HERE](https://drive.google.com/file/d/1BAgrUhxF5DXVi9D0II0WXmvqAYFj7Ozz/view?usp=sharing)
+
 
 ## INSTALLATION
 
