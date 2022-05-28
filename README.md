@@ -114,8 +114,8 @@ If css is giving error even if properly linked (Go to chrome > settings > clear 
 
 # FEATURES AND MORE
 
-- The application has an authentication system for login into the system.
-- One should register their accound first, also the register asked required fields which should be filled properly. Here the username should be unique, if the username is already taken then it will prompt with an alert message.
+- The application has an authentication system for user's to login into the system.
+- One should register their account first, also the in register the required fields should be filled properly. Here the username should be unique, if the username is already taken then it will prompt with an alert message. Make sure the user puts proper ID provided by the faculty.
 - Also the credentials should match properly or else you cannot login into  the application.
 - The dashboard conntains 3 main options > Scan and create data > Train images > take  attendance.
 - Detects face within second.
@@ -124,7 +124,6 @@ If css is giving error even if properly linked (Go to chrome > settings > clear 
 - The faculty will have the access to the database where in all the Registered users data along with the email id will be saved. 
 - Also The student face data and student attendance when marked is saved in an csv file which is connected to the application.
 - The application also has About and Contact us.
-
 
 
 
