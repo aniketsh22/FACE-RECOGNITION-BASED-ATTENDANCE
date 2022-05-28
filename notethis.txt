@@ -11,3 +11,6 @@
 	with same id as they have been provided while creating their dataset.
 	
 	The student data set information and marked attendance information will get automatically collected in the csv files.
+	
+
+- THE DATABASE RELATED INFO IS SHARED IN THE REDME FILE.
