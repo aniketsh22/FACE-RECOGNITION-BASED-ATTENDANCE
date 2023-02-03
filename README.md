@@ -13,7 +13,7 @@ TRACKO A browser based face recognition attendance system. Made this project for
 
 # Microsoft ENGAGE 2022
 
-Problem statement: 
+Problem statement:
 
 Develop a browser-based application or a native mobile application to demonstrate application of Face Recognition technology.
 You could choose to demonstrate application of Face Recognition in any area of application of your choice.
